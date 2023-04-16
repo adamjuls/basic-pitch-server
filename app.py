@@ -34,7 +34,9 @@ def predict():
 	
     midi_file_name = file_name[:-4]
     os.remove(file_name)
-    return send_file("midi_output/" + midi_file_name + "_basic_pitch.mid", as_attachment=True)
+    # return send_file(midi_file_path, mimetype='audio/midi', as_attachment=True, attachment_filename='file.mid')
+    print("midi_output/" + midi_file_name + "_basic_pitch.mid")
+    return send_file("midi_output/" + midi_file_name + "_basic_pitch.mid", mimetype='audio/midi', as_attachment=True)
     
     
 
